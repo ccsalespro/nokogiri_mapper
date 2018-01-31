@@ -41,6 +41,14 @@ Call `from_xml` to parse XML into an object.
 User.from_xml("<user><name>joe</name><active>1</active></user>")
 ```
 
+Fields can also be declared with the field helper. This is useful for configurable field types such as `BoolField` or custom field types.
+
+```ruby
+class User < NokogiriMapper::Struct
+  field :active, NokogiriMapper::BoolField.new "alive", "alive", true_strings: ["yes"], false_strings: ["no"]
+end
+```
+
 ## Development
 
 After checking out the repo, run `bin/setup` to install dependencies. Then, run `rake test` to run the tests. You can also run `bin/console` for an interactive prompt that will allow you to experiment.
