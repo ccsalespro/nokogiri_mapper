@@ -83,7 +83,7 @@ module NokogiriMapper
     def to_xml_builder(parent)
       parent.send(xml_element) do
         fields.each do |k, f|
-          f.build_xml(parent, send(k))
+          f.to_xml_builder(parent, send(k))
         end
       end
     end

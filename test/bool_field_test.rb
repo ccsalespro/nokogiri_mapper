@@ -11,12 +11,12 @@ class BoolFieldTest < Minitest::Test
     refute bool_field.from_xml_node(doc)
   end
 
-  def test_build_xml
+  def test_to_xml_builder
     bool_field = NokogiriMapper::BoolField.new "alive", "alive", true_strings: ["yes"], false_strings: ["no"]
 
     builder = Nokogiri::XML::Builder.new { |xml|
       xml.record {
-        bool_field.build_xml xml, true
+        bool_field.to_xml_builder xml, true
       }
     }
 
@@ -31,7 +31,7 @@ class BoolFieldTest < Minitest::Test
 
     builder = Nokogiri::XML::Builder.new { |xml|
       xml.record {
-        bool_field.build_xml xml, false
+        bool_field.to_xml_builder xml, false
       }
     }
 

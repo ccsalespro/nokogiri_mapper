@@ -19,9 +19,9 @@ module NokogiriMapper
       type.from_xml_node(node) if node
     end
 
-    def build_xml(xml, value)
+    def to_xml_builder(xml, value)
       return if value.nil?
-      value.build_xml(xml)
+      value.to_xml_builder(xml)
     end
   end
 end

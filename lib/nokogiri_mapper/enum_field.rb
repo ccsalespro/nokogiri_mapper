@@ -22,7 +22,7 @@ module NokogiriMapper
       end
     end
 
-    def build_xml(xml, value)
+    def to_xml_builder(xml, value)
       return if value.nil?
       xml.send(xml_element, value.value)
     end

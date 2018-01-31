@@ -23,7 +23,7 @@ module NokogiriMapper
       end
     end
 
-    def build_xml(xml, value)
+    def to_xml_builder(xml, value)
       return if value.nil?
       s = value.round(2).to_s("F")
       s << "0" if s[-2] == "." # dddd.dd is required
