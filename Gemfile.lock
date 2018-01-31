@@ -1,0 +1,28 @@
+PATH
+  remote: .
+  specs:
+    nokogiri_mapper (0.1.0)
+      nokogiri
+
+GEM
+  remote: https://rubygems.org/
+  specs:
+    meta_enum (2.0.0)
+    mini_portile2 (2.3.0)
+    minitest (5.11.1)
+    nokogiri (1.8.1)
+      mini_portile2 (~> 2.3.0)
+    rake (10.4.2)
+
+PLATFORMS
+  ruby
+
+DEPENDENCIES
+  bundler (~> 1.16)
+  meta_enum (~> 2.0)
+  minitest (~> 5.0)
+  nokogiri_mapper!
+  rake (~> 10.0)
+
+BUNDLED WITH
+   1.16.1
