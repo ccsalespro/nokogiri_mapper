@@ -32,7 +32,7 @@ module NokogiriMapper
       end
 
       def field(name, field)
-        attr_reader name
+        attr_accessor name
         @fields[name] = field
       end
     end
